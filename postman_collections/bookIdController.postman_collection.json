@@ -1,0 +1,155 @@
+{
+	"variables": [],
+	"info": {
+		"name": "bookIdController",
+		"_postman_id": "df018cea-d951-e17a-cf08-e126116c6de6",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET: /Books/7",
+			"request": {
+				"url": "localhost:8000/api/Books/7",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"My Old Book\",\n\t\"genre\": \"Science Fiction\",\n\t\"author\": \"Jon Millson\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PUT: /Books/7 - Test 1",
+			"request": {
+				"url": "localhost:8000/api/Books/7",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"The CooonMan\",\n    \"author\": \"Jon Doools Burg\",\n    \"read_flag\": 0\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PUT: /Books/7 - Test 2",
+			"request": {
+				"url": "localhost:8000/api/Books/7",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"read_flag\": 1\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH: /Books/7 - Test 1",
+			"request": {
+				"url": "localhost:8000/api/Books/7",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"The WankSander\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH: /Books/7 - Test 2",
+			"request": {
+				"url": "localhost:8000/api/Books/7",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"genre\": \"Fiction\",\n    \"read_flag\": 1\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DEL: /Books/8",
+			"request": {
+				"url": "localhost:8000/api/Books/8",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET: Books/7 with Test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"Your test name\"] = jsonData.id === 7;",
+							"tests[\"Your test name\"] = jsonData.title === \"The WankSander\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "localhost:8000/api/Books/7",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

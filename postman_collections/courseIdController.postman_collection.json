@@ -1,0 +1,155 @@
+{
+	"variables": [],
+	"info": {
+		"name": "courseIdController",
+		"_postman_id": "236c3075-2b89-22a7-9d53-7408dc42e633",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET: /Courses/2",
+			"request": {
+				"url": "localhost:8000/api/Courses/2",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"My Old Book\",\n\t\"genre\": \"Science Fiction\",\n\t\"author\": \"Jon Millson\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PUT: /Courses/2 - Test 1",
+			"request": {
+				"url": "localhost:8000/api/Courses/2",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Clean Code: Writing Code for Humans\",\r\n    \"watch_url\": \"http://www.pluralsight.com/courses/writing-clean-code-humans\",\r\n    \"author_id\": 1,\r\n    \"length\": \"3:10\",\r\n    \"category\": \"Software Best Practices\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PUT: /Courses/2 - Test 2",
+			"request": {
+				"url": "localhost:8000/api/Courses/2",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Learn Doodle\",\r\n    \"category\": \"Worst Practices\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH: /Courses/2 - Test 1",
+			"request": {
+				"url": "localhost:8000/api/Courses/2",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"category\": \"OK Practices\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH: /Courses/2 - Test 2",
+			"request": {
+				"url": "localhost:8000/api/Courses/2",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Clean Code: Writing Code for Humans\",\r\n    \"watch_url\": \"http://www.pluralsight.com/courses/writing-clean-code-humans\",\r\n    \"author_id\": 1,\r\n    \"length\": \"35:10\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DEL: /Courses/3",
+			"request": {
+				"url": "localhost:8000/api/Courses/3",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET: Courses/2 with Test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"ID is correct\"] = jsonData.id === 2;",
+							"tests[\"Title is correct\"] = jsonData.title === \"Clean Code: Writing Code for Humans\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "localhost:8000/api/Courses/2",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

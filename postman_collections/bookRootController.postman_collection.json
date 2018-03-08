@@ -1,0 +1,123 @@
+{
+	"variables": [],
+	"info": {
+		"name": "bookRootController",
+		"_postman_id": "015a3eee-17e5-d04c-a06b-dbd090e5e93a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST: /Books",
+			"request": {
+				"url": "localhost:8000/api/Books",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"The New Crekker\",\n\t\"genre\": \"Science Fiction\",\n\t\"author\": \"Jon D Hooliganer\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET: /Books - Test 1",
+			"request": {
+				"url": "localhost:8000/api/Books",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"The Looger\",\n\t\"genre\": \"Science Fiction\",\n\t\"author\": \"Jon Doools\",\n\t\"read_flag\": 1\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET: /Books - Test 2",
+			"request": {
+				"url": {
+					"raw": "localhost:8000/api/books?genre=Non%20Fiction",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"books"
+					],
+					"query": [
+						{
+							"key": "genre",
+							"value": "Non%20Fiction",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET: /Books - Test 3",
+			"request": {
+				"url": {
+					"raw": "localhost:8000/api/books?genre=Fiction&read_flag=0&author=Jerry%20Mongoose",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"books"
+					],
+					"query": [
+						{
+							"key": "genre",
+							"value": "Fiction",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "read_flag",
+							"value": "0",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "author",
+							"value": "Jerry%20Mongoose",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

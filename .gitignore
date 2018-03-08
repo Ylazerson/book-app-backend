@@ -1,0 +1,96 @@
+
+
+
+
+*.swp
+*.swo
+
+*.sublime-project
+
+*.sublime-workspace
+
+~$Tech Learning Status.xlsx
+
+*.~1~
+
+node_modules/
+.idea/
+.env
+npm-debug.log
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# Rope
+.ropeproject
+
+# Django stuff:
+*.log
+*.pot
+
+# Sphinx documentation
+docs/_build/
+
+*.eps
+
+
+spec/stock screener v2.xlsb
+
+spec/~$stock screener v2.xlsb
+
+OHLC-hist-data/
+solution-iyH/file-import-scripts/output.txt
+
+solution-iyH/file-import-scripts/output.txt
+
+solution-iyH/file-import-scripts/output.txt
+
+solution-iyH/file-import-scripts/output.txt
+
+hist_files/dd_mon_yyyy.csv
+
+hist_files/ddmmyyyy.csv
+
+spec/~$stock screener v3.xlsb
+
+spec/stock screener v3.xlsb
+
+raw_files/large_hist_files/dd_mon_yyyy.csv
+
+raw_files/large_hist_files/ddmmyyyy.csv
+
+
+
+
+~*

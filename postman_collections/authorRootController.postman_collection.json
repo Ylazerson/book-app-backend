@@ -1,0 +1,97 @@
+{
+	"variables": [],
+	"info": {
+		"name": "authorRootController",
+		"_postman_id": "f18ccb20-ce73-ac61-737a-7a5a3afc49ec",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET: /Authors - Test 1",
+			"request": {
+				"url": "localhost:8000/api/authors",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"The Looger\",\n\t\"genre\": \"Science Fiction\",\n\t\"author\": \"Jon Doools\",\n\t\"read_flag\": 1\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET: /Authors - Test 2",
+			"request": {
+				"url": {
+					"raw": "localhost:8000/api/authors?first_name=Rick",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "Rick",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET: /Authors - Test 3",
+			"request": {
+				"url": {
+					"raw": "localhost:8000/api/authors?first_name=Rick&last_name=Dumana",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "first_name",
+							"value": "Rick",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "last_name",
+							"value": "Dumana",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

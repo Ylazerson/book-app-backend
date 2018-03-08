@@ -1,0 +1,12 @@
+B"H
+
+
+
+    1: Get dev/prod db's setup.
+        - In build/deploy/test scripts set which db to use
+
+    2: DB build/deploy process.
+        - Perhaps make into separate repo
+
+
+    3: Incorporate ideas from js-fp, including seamless-immuatble

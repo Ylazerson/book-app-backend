@@ -1,0 +1,117 @@
+{
+	"variables": [],
+	"info": {
+		"name": "courseRootController",
+		"_postman_id": "2de5ee01-ef5e-4d0c-994f-870bdde6fa3b",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST: /Courses",
+			"request": {
+				"url": "localhost:8000/api/Courses",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Writing Code for Dogs\",\r\n    \"watch_url\": \"google.com\",\r\n    \"author_id\": 2,\r\n    \"length\": \"35:10\",\r\n    \"category\": \"Software Decent Practices\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET: /Courses - Test 1",
+			"request": {
+				"url": "localhost:8000/api/Courses",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"The Looger\",\n\t\"genre\": \"Science Fiction\",\n\t\"author\": \"Jon Doools\",\n\t\"read_flag\": 1\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET: /Courses - Test 2",
+			"request": {
+				"url": {
+					"raw": "localhost:8000/api/courses?category=OK%20Practices",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"courses"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "OK%20Practices",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET: /Courses - Test 3",
+			"request": {
+				"url": {
+					"raw": "localhost:8000/api/courses?category=OK%20Practices&author_id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"courses"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "OK%20Practices",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "author_id",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

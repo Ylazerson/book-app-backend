@@ -1,0 +1,10 @@
+{
+    "name"       : "Book Backend Node API",
+    "description": "A simple API built in Node and Express hosted on Heroku",
+    "repository" : "https://github.com/Ylazerson/book-app-backend",
+    "keywords"   : [
+        "node",
+        "express",
+        "static"
+    ]
+}
